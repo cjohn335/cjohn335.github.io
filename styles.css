@@ -1,0 +1,130 @@
+/* === Root Variables: Color Scheme === */
+:root {
+  --text: #ffffff;
+  --background: #141415;
+  --primary: #27272a;
+  --secondary: #434346;
+  --accent: #458e4f;
+}
+
+/* === Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Body === */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+}
+
+/* === Header === */
+.site-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('images/Header1.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Logo at top-left */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 120px;
+  height: auto;
+}
+
+/* Navigation at top-right */
+.top-nav {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.top-nav ul li a {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* Centered title and tagline */
+.header-text {
+  color: var(--text);
+}
+
+.header-text h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 120px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.header-text .tagline {
+  font-family: 'EB Garamond', serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 6px;
+  color: var(--accent);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* === Intro Section === */
+.intro {
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.intro p {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
