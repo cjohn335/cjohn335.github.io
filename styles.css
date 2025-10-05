@@ -27,16 +27,99 @@ body {
   position: relative;
   width: 100%;
   height: 400px;
-
   background: url('Header1.jpg') no-repeat center center/cover;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+/* === Subpage Header (for History Page) === */
+.subpage-header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Logo at top-left */
+.subpage-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay for readability */
+}
+
+.subpage-title {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.subpage-title h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 90px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Adjust nav placement for subpage */
+.subpage-header .top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* === Subpage Header (for History Page) === */
+.subpage-header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subpage-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay for readability */
+}
+
+.subpage-title {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.subpage-title h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 90px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* === Fix for Unclickable Navigation on Subpages === */
+.subpage-header .top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10; /* ensures links sit above overlay */
+}
+
+.top-nav a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto; /* makes sure they’re clickable */
+}
+
+/* Logo */
 .logo {
   position: absolute;
   top: 15px;
@@ -45,7 +128,7 @@ body {
   height: auto;
 }
 
-/* Navigation at top-right */
+/* Navigation */
 .top-nav {
   position: absolute;
   top: 15px;
@@ -71,46 +154,113 @@ body {
   color: var(--accent);
 }
 
-/* Centered title and tagline */
+/* Active navigation highlight */
+.top-nav a.active {
+  color: var(--accent);
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* === Header Text === */
 .header-text {
+  text-align: center;
+  color: #ffffff;
+}
+
+.main-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 115px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.4rem;
+}
+
+.divider-line {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 720px;
+  height: 2px;
+  background-color: #ffffff;
+  border: none;
+  opacity: 0.9;
+}
+
+.tagline {
+  font-family: 'EB Garamond', serif;
+  font-size: 55px; /* Bigger tagline */
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* === Intro Section with Image Overlay === */
+.intro-section {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+}
+
+.intro-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 900px;
+  color: var(--text);
+  padding: 0 20px;
+}
+
+.intro-text h2 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--text);
 }
 
-.header-text h1 {
-  font-family: 'EB Garamond', serif;
-  font-size: 120px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.header-text .tagline {
-  font-family: 'EB Garamond', serif;
-  font-size: 60px;
-  font-weight: bold;
-  margin-top: 6px;
-  color: var(--accent);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-/* === Intro Section === */
-.intro {
-  margin: 30px auto;
-  max-width: 800px;
+/* === Getting Started Section === */
+.getting-started {
   text-align: center;
+  max-width: 900px;
+  margin: 20px auto 100px auto;
   padding: 20px;
 }
 
-.intro h2 {
+.getting-started h2 {
   font-family: 'EB Garamond', serif;
   font-size: 1.9rem;
-  font-weight: bold;
-  margin-bottom: 15px;
   color: var(--accent);
+  margin-bottom: 20px;
 }
 
-.intro p {
+.getting-started p {
   font-family: 'Merriweather', serif;
   font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
 }
 
 /* === Footer === */
@@ -129,4 +279,250 @@ footer a {
 
 footer a:hover {
   color: var(--accent);
+}
+/* === History Page Styling Fixes === */
+
+/* Headline styling */
+.page-intro h2 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Sources section */
+.sources {
+  text-align: center;
+  max-width: 900px;
+  margin: 20px auto 80px auto;
+  font-family: 'Merriweather', serif;
+}
+
+.sources h3 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sources ul li {
+  margin: 8px 0;
+}
+
+.sources a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.sources a:hover {
+  color: #5cb86a; /* lighter green hover */
+  text-decoration: underline;
+}
+/* === Tools & Gadgets Page Layout === */
+
+/* Grid layout for tools */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.tool-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tool-item h3 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.tool-item p {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 10px;
+}
+
+/* === Tools Table Section === */
+.tools-table-section {
+  text-align: center;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.tools-table-section h3 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 15px;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tools-table th,
+.tools-table td {
+  border: 1px solid var(--secondary);
+  padding: 10px;
+  color: var(--text);
+}
+
+.tools-table th {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.tools-table td {
+  background-color: var(--background);
+}
+
+/* === Tools Page Summary Section === */
+.summary {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto 80px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+/* === TOOLS PAGE ADJUSTMENTS === */
+
+/* Headline text under banner */
+.page-intro h2 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 2.3rem;     /* bigger headline */
+  font-weight: 600;      /* semi-bold */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.page-intro p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;     /* bigger supporting text */
+  line-height: 1.8;
+  color: var(--text);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+/* Larger body text for the whole tools page */
+.tool-item p,
+.tools-table-section p,
+.tools-table td,
+.tools-table th,
+.summary p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Remove border/white frame on K-II Meter image */
+.tool-item img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* Summary section emphasized */
+.summary p {
+  font-size: 1.25rem;     /* bigger text */
+  font-weight: 600;       /* semi-bold */
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* === HISTORY PAGE DIVIDER - THIN VERSION === */
+.line-divider {
+  text-align: center;
+  margin: 60px auto 50px auto;
+  width: 100%;
+}
+
+.line-divider img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;           /* keeps it long */
+  max-width: 900px;
+  height: 2px;          /* makes it thin and sleek */
+  object-fit: cover;    /* maintains smooth scaling */
+  opacity: 0.8;
+  filter: brightness(90%);
+}
+
+/* === HISTORY PAGE HEADLINE SPACING === */
+.page-intro h2 {
+  margin-top: 40px;      /* moves headline down from the banner */
+  font-size: 2.2rem;     /* optional: keeps it strong but elegant */
+  font-weight: 600;      /* semi-bold for readability */
+  color: var(--accent);
+  text-align: center;
+}
+
+/* === HISTORY PAGE CENTER IMAGE === */
+.center-image {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.center-image img {
+  width: 60%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.center-image p {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* === HISTORY PAGE SOURCE LINKS INLINE === */
+.source-links {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+}
+
+.source-links a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.source-links a:hover {
+  color: #5cb86a; /* slightly lighter on hover */
+  text-decoration: underline;
 }
