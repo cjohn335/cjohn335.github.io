@@ -19,7 +19,22 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-family: 'Merriweather', serif;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* === Paragraphs === */
+p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* === Headings === */
+h1, h2, h3 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  line-height: 1.4;
 }
 
 /* === Header === */
@@ -33,93 +48,8 @@ body {
   justify-content: center;
   text-align: center;
 }
-/* === Subpage Header (for History Page) === */
-.subpage-header {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.subpage-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay for readability */
-}
-
-.subpage-title {
-  position: relative;
-  text-align: center;
-  z-index: 2;
-}
-
-.subpage-title h1 {
-  font-family: 'EB Garamond', serif;
-  font-size: 90px;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Adjust nav placement for subpage */
-.subpage-header .top-nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-/* === Subpage Header (for History Page) === */
-.subpage-header {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subpage-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay for readability */
-}
-
-.subpage-title {
-  position: relative;
-  text-align: center;
-  z-index: 2;
-}
-
-.subpage-title h1 {
-  font-family: 'EB Garamond', serif;
-  font-size: 90px;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* === Fix for Unclickable Navigation on Subpages === */
-.subpage-header .top-nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10; /* ensures links sit above overlay */
-}
-
-.top-nav a {
-  position: relative;
-  z-index: 10;
-  pointer-events: auto; /* makes sure they’re clickable */
-}
-
-/* Logo */
+/* === Logo === */
 .logo {
   position: absolute;
   top: 15px;
@@ -128,19 +58,17 @@ body {
   height: auto;
 }
 
-/* Navigation */
+/* === Navigation === */
 .top-nav {
   position: absolute;
   top: 15px;
   right: 20px;
 }
-
 .top-nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
 .top-nav ul li a {
   font-family: 'EB Garamond', serif;
   font-size: 1.1rem;
@@ -149,15 +77,11 @@ body {
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
 .top-nav ul li a:hover {
   color: var(--accent);
 }
-
-/* Active navigation highlight */
 .top-nav a.active {
   color: var(--accent);
-  font-weight: bold;
   border-bottom: 2px solid var(--accent);
 }
 
@@ -166,17 +90,13 @@ body {
   text-align: center;
   color: #ffffff;
 }
-
 .main-title {
   font-family: 'EB Garamond', serif;
   font-size: 115px;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin-bottom: 0.4rem;
 }
-
 .divider-line {
   display: block;
   margin: 0 auto;
@@ -184,16 +104,12 @@ body {
   max-width: 720px;
   height: 2px;
   background-color: #ffffff;
-  border: none;
   opacity: 0.9;
 }
-
 .tagline {
   font-family: 'EB Garamond', serif;
-  font-size: 55px; /* Bigger tagline */
+  font-size: 55px;
   font-weight: 700;
-  color: #ffffff;
-  margin-top: 0.5rem;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
@@ -206,34 +122,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
-
 .intro-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(100%);
 }
-
 .intro-text {
   position: absolute;
-  top: 30%;
+  top: 15%;            /* move this number lower to push text up */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
   color: var(--text);
   padding: 0 20px;
 }
-
 .intro-text h2 {
   font-family: 'EB Garamond', serif;
   color: var(--accent);
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 .intro-text p {
   font-family: 'Merriweather', serif;
   font-size: 1rem;
@@ -244,23 +155,69 @@ body {
 /* === Getting Started Section === */
 .getting-started {
   text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  padding: 20px 60px;
+  background-color: #141415;  /* 👈 force match to page background */
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* === Text Summary Banner (removed image, now seamless) === */
+.text-summary-banner {
+  background: none;           /* no image */
+  background-color: #141415;  /* match page background */
+  text-align: center;
+  padding: 0;                 /* remove extra band spacing */
+  margin: 0;                  /* no gap before/after */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-summary-banner::before {
+  content: none;              /* no overlay */
+}
+
+.text-summary-banner .overlay-content {
   max-width: 900px;
-  margin: 20px auto 100px auto;
-  padding: 20px;
-}
-
-.getting-started h2 {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.9rem;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-.getting-started p {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: var(--text);
+  text-shadow: none;
+}
+
+/* overlayed text content */
+.text-summary-banner .overlay-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* === Discover More Section === */
+.discover-more {
+  text-align: center;
+  padding: 70px 20px 40px 20px;
+}
+.discover-more h2 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.discover-more p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
 /* === Footer === */
@@ -271,258 +228,1042 @@ footer {
   margin-top: 30px;
   font-size: 0.9rem;
 }
-
 footer a {
   color: var(--text);
   text-decoration: none;
 }
-
 footer a:hover {
   color: var(--accent);
 }
-/* === History Page Styling Fixes === */
 
-/* Headline styling */
-.page-intro h2 {
-  font-family: 'EB Garamond', serif;
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1.9rem;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-/* Sources section */
-.sources {
-  text-align: center;
-  max-width: 900px;
-  margin: 20px auto 80px auto;
-  font-family: 'Merriweather', serif;
-}
-
-.sources h3 {
-  color: var(--accent);
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.sources ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sources ul li {
-  margin: 8px 0;
-}
-
-.sources a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.sources a:hover {
-  color: #5cb86a; /* lighter green hover */
-  text-decoration: underline;
-}
-/* === Tools & Gadgets Page Layout === */
-
-/* Grid layout for tools */
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 1000px;
-  margin: 50px auto;
-  text-align: center;
-}
-
-.tool-item img {
+/* === Subpage Headers === */
+.subpage-header {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.tool-item h3 {
-  color: var(--accent);
-  font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
-  margin-top: 15px;
-}
-
-.tool-item p {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
-  color: var(--text);
-  margin-top: 10px;
-}
-
-/* === Tools Table Section === */
-.tools-table-section {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  max-width: 1000px;
-  margin: 50px auto;
+  color: var(--text);
+}
+.subpage-title h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  margin-top: 80px;
+  letter-spacing: 1px;
 }
 
-.tools-table-section h3 {
-  color: var(--accent);
-  font-size: 1.8rem;
+/* === Divider / Faded Banner === */
+.faded-banner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: url('Faded.PNG') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.faded-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.faded-banner .banner-text {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
+  top: -40px;  /* moves the faded text block up */
+  color: var(--text);
+}
+.faded-banner .banner-text h2 {
   font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  color: var(--accent);
   margin-bottom: 15px;
 }
-
-.tools-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.tools-table th,
-.tools-table td {
-  border: 1px solid var(--secondary);
-  padding: 10px;
-  color: var(--text);
-}
-
-.tools-table th {
-  background-color: var(--primary);
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.tools-table td {
-  background-color: var(--background);
-}
-
-/* === Tools Page Summary Section === */
-.summary {
-  text-align: center;
-  max-width: 900px;
-  margin: 40px auto 80px auto;
+.faded-banner .banner-text p {
   font-family: 'Merriweather', serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--text);
-  line-height: 1.7;
 }
-/* === TOOLS PAGE ADJUSTMENTS === */
 
-/* Headline text under banner */
-.page-intro h2 {
-  color: var(--accent);
-  font-family: 'EB Garamond', serif;
-  font-size: 2.3rem;     /* bigger headline */
-  font-weight: 600;      /* semi-bold */
+/* === Responsive Fixes === */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .intro-text {
+    top: 25%;
+    font-size: 1.1rem;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .main-title {
+    font-size: 70px;
+  }
+  .tagline {
+    font-size: 35px;
+  }
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+  .intro-text p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+/* === Subpage Headers === */
+.subpage-header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: var(--text);
+}
+
+.subpage-title h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 4rem; /* bigger, more like a banner */
+  color: #ffffff; /* white text */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* strong shadow for readability */
+  margin-top: 80px;
+  letter-spacing: 1px;
+}
+
+/* === Page Intro === */
+.page-intro {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.page-intro h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  color: var(--accent);
   margin-bottom: 15px;
 }
 
 .page-intro p {
   font-family: 'Merriweather', serif;
-  font-size: 1.2rem;     /* bigger supporting text */
-  line-height: 1.8;
-  color: var(--text);
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-}
-
-/* Larger body text for the whole tools page */
-.tool-item p,
-.tools-table-section p,
-.tools-table td,
-.tools-table th,
-.summary p {
   font-size: 1.1rem;
   line-height: 1.8;
+  color: var(--text);
 }
 
-/* Remove border/white frame on K-II Meter image */
-.tool-item img {
-  width: 100%;
-  height: auto;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  box-shadow: none;
-  background: none;
+/* === Page Intro spacing fix ONLY for Rules page === */
+body.rules-page .page-intro {
+  margin-top: -25px; /* moves intro closer to banner */
+  padding-top: 0;
 }
 
-/* Summary section emphasized */
-.summary p {
-  font-size: 1.25rem;     /* bigger text */
-  font-weight: 600;       /* semi-bold */
-  text-align: center;
-  margin-top: 30px;
-}
 
-/* === HISTORY PAGE DIVIDER - THIN VERSION === */
-.line-divider {
-  text-align: center;
-  margin: 60px auto 50px auto;
-  width: 100%;
-}
-
-.line-divider img {
-  display: block;
-  margin: 0 auto;
-  width: 75%;           /* keeps it long */
-  max-width: 900px;
-  height: 2px;          /* makes it thin and sleek */
-  object-fit: cover;    /* maintains smooth scaling */
-  opacity: 0.8;
-  filter: brightness(90%);
-}
-
-/* === HISTORY PAGE HEADLINE SPACING === */
-.page-intro h2 {
-  margin-top: 40px;      /* moves headline down from the banner */
-  font-size: 2.2rem;     /* optional: keeps it strong but elegant */
-  font-weight: 600;      /* semi-bold for readability */
-  color: var(--accent);
-  text-align: center;
-}
-
-/* === HISTORY PAGE CENTER IMAGE === */
+/* === History Page Elements === */
 .center-image {
   text-align: center;
   margin: 40px auto;
 }
 
 .center-image img {
-  width: 60%;
+  width: 85%;
   max-width: 700px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .center-image p {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
-  color: var(--text);
   margin-top: 10px;
   font-style: italic;
-  opacity: 0.9;
+  color: var(--accent);
 }
 
-/* === HISTORY PAGE SOURCE LINKS INLINE === */
-.source-links {
+.line-divider {
   text-align: center;
-  margin-top: 10px;
-  font-family: 'Merriweather', serif;
-  font-size: 0.95rem;
+  margin: 60px 0;
+}
+
+.line-divider img {
+  width: 60%;
+  height: 2px;
+  opacity: 0.7;
+}
+
+/* === Sources Section === */
+.sources {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.sources h3 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
 .source-links a {
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
-  padding: 0 8px;
-  transition: color 0.3s ease;
+  margin: 0 10px;
 }
 
 .source-links a:hover {
-  color: #5cb86a; /* slightly lighter on hover */
+  color: var(--accent);
   text-decoration: underline;
 }
+
+/* === Tools & Gadgets Grid === */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+.tool-item {
+  background-color: var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.tool-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tool-item h3 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  text-align: center;
+}
+
+.tool-item p {
+  padding: 0 20px 20px;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  color: var(--text);
+  text-align: justify;
+}
+
+/* === Tools Table === */
+.tools-table-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.tools-table-section h3 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--primary);
+}
+
+.tools-table th, .tools-table td {
+  padding: 15px;
+  border: 1px solid var(--secondary);
+  font-family: 'Merriweather', serif;
+}
+
+.tools-table th {
+  background-color: var(--secondary);
+  color: var(--accent);
+}
+
+.tools-table td {
+  color: var(--text);
+}
+
+.summary {
+  max-width: 800px;
+  margin: 40px auto 80px auto;
+  padding: 0 30px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* === Rules Page Styling === */
+.rules-list {
+  background-color: #000;
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  line-height: 1.9;
+  list-style-type: none;
+}
+
+.rules-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules-list li {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.rules-list li strong {
+  display: block;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--accent); /* green color */
+  margin-bottom: 6px;
+}
+
+/* === Divider Image === */
+.divider-img {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+/* === Summary Section === */
+.summary {
+  background-color: #000;
+  color: var(--accent);
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 40px 20px 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* === Rules Page Styling (Updated Clean Version) === */
+.rules-list {
+  background-color: transparent; /* remove black box */
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  line-height: 1.9;
+}
+
+.rules-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules-list li {
+  margin-bottom: 30px;
+  font-size: 1.3rem;  /* increased font size */
+  line-height: 1.8;   /* slightly tighter spacing */
+  text-align: justify;
+}
+
+/* Headings (green bold titles) */
+.rules-list li strong {
+  display: block;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+/* Divider Image */
+.divider-img {
+  width: 100%;
+  display: block;
+  margin: 0;
+  border: none;
+}
+
+/* Summary Section */
+.su
+
+.intro-text h2 {
+  max-width: 1200px !important;
+}
+
+/* === Summary Section (clean, no black box) === */
+.summary {
+  background-color: transparent; /* removes black outline */
+  color: var(--accent);
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.8;
+  padding: 60px 20px 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* === Rules List Spacing Fix === */
+.rules-list {
+  margin-top: -30px;  /* pull content closer to the divider */
+  padding-top: 0;     /* remove any extra padding */
+}
+
+/* === Fix Ghostly Hours and Subpage Titles to be White === */
+.main-title,
+.subpage-title h1 {
+  color: #ffffff !important;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* === Make All White Text Consistent Across Pages === */
+p,
+.rules-list li,
+.tools-table td,
+.tools-grid p,
+.summary {
+  font-size: 1.1rem;   /* same as “When getting started” */
+  line-height: 1.9;
+  color: #ffffff;
+}
+
+/* === Restore Default Intro Layout for All Pages === */
+.intro-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 10%;
+}
+
+/* === Apply Custom Layout ONLY to Locations Page === */
+body.locations-page .intro-section {
+  display: block;
+  padding: 80px 10% 60px 10%;
+}
+
+body.locations-page .intro-text h2 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  font-weight: 500;
+  text-align: center;
+  white-space: normal;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+body.locations-page .subpage-title h1 {
+  font-size: 5.5rem;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+  color: #ffffff;
+}
+
+/* === FIXED FADED BANNER / DIVIDER (APPLIES TO ALL PAGES) === */
+.faded-banner {
+  position: relative;
+  width: 100%;
+  height: 380px; /* adjust height as needed */
+  background: url('Faded.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.faded-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.45); /* subtle dark overlay */
+  z-index: 1;
+}
+
+.faded-banner .banner-text {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
+  color: var(--text);
+}
+
+.faded-banner .banner-text h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.faded-banner .banner-text p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* === TEMP FIX: remove anything causing black box === */
+.faded-banner, .faded-banner::before, .faded-banner .banner-text {
+  background-color: transparent !important;
+  background-image: url('Faded.PNG') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.faded-banner::before {
+  content: none !important;
+}
+
+body.rules-page .faded-banner .banner-text {
+  top: -65px; /* moves your intro text closer to banner */
+}
+
+/* === OVERRIDE: Consistent Readable Font for All Subpages === */
+body.rules-page .rules-list li,
+body.history-page p,
+body.tools-page p,
+body.locations-page p,
+body.history-page li,
+body.tools-page li,
+body.locations-page li,
+body.history-page .summary,
+body.tools-page .summary,
+body.locations-page .summary {
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+}
+
+/* === LOCATIONS PAGE INTRO BOLD + CONDENSED === */
+body.locations-page .banner-text h2 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 900 !important;   /* strong bold */
+  font-size: 2rem !important;    /* slightly larger */
+  line-height: 1.4 !important;   /* tighter spacing */
+  color: var(--accent) !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* === LOCATIONS PAGE: Move Intro Closer to Banner === */
+body.locations-page .faded-banner {
+  margin-top: -40px;  /* pulls the faded section upward */
+}
+
+body.locations-page .banner-text {
+  position: relative;
+  top: -56px;         /* fine-tunes upward shift of the text */
+}
+
+/* === LOCATIONS PAGE VIDEO SECTION (SIDE-BY-SIDE) === */
+.video-section {
+  text-align: center;
+  margin: 80px auto;
+  padding: 0 30px;
+  max-width: 1200px;
+}
+
+.video-section .hook {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.video-pair {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  flex: 1 1 45%;
+  max-width: 560px;
+}
+
+.video-item video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.video-item p {
+  margin-top: 10px;
+}
+
+.video-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+}
+
+.video-item a:hover {
+  text-decoration: underline;
+}
+
+/* === Sources Section (Polished Compact Layout) === */
+.sources {
+  text-align: center;
+  margin: 60px auto 40px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.sources h3 {
+  font-family: 'EB Garamond', serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.source-list {
+  list-style: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+}
+
+.source-list li {
+  margin: 6px 0;
+}
+
+.source-list a {
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, letter-spacing 0.2s ease;
+}
+
+.source-list a:hover {
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* === Image Divider (Home Page Cameraman) === */
+.image-divider {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.image-divider img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Line Divider (Thin, Elegant Style) === */
+.line-divider {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.line-divider img {
+  width: 60%;
+  height: 2px;
+  opacity: 0.7;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Sub Message (Home Page Outro) === */
+.sub-message {
+  text-align: center;
+  margin: 40px auto 80px auto;
+  max-width: 950px;
+  padding: 0 30px;
+}
+
+.sub-message h2 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sub-message p {
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* === Discover More Section (uses fadedbanner2.png like other banners) === */
+.discover-more {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 170px 5% 200px 5%;
+  background: url('fadedbanner2.png') no-repeat center center / cover;
+  color: var(--text);
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Make sure nothing overrides background */
+.discover-more::before {
+  content: none;
+}
+
+/* === Heading & Text === */
+.discover-more h2 {
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.discover-more p {
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+
+/* === Discover Grid === */
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.discover-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.discover-item:hover {
+  transform: scale(1.03);
+}
+
+/* === Grid Images === */
+.discover-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(95%);
+  transition: filter 0.3s ease;
+}
+
+.discover-item:hover img {
+  filter: brightness(105%);
+}
+
+/* === Overlay === */
+.overlay-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.discover-item:hover .overlay-text {
+  opacity: 1;
+}
+
+/* === Captions === */
+.discover-item p {
+  margin-top: 12px;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: center;
+}
+
+.discover-more {
+  margin-top: -80px; /* scoots it closer to the previous section */
+}
+
+/* === CONTACT SECTION ON HOME PAGE === */
+.contact-section {
+  background: url('Header1.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 10%;
+  position: relative;
+  color: var(--text);
+  margin-top: 10px;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.7); /* dark overlay */
+  z-index: 0;
+}
+
+.contact-heading {
+  position: relative;
+  z-index: 1;
+  font-family: 'EB Garamond', serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.contact-heading span {
+  color: #5ccf64; /* brighter green for “WANT” */
+}
+
+.contact-subheading {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* === Form Styling === */
+.contact-form {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(90, 90, 90, 0.7);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5a5a5a;
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form .form-row div {
+  flex: 1;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #67ad71;
+}
+
+/* === FINAL SAFE FIX: Mobile Banner Text Cutoff === */
+@media (max-width: 768px) {
+  /* Make banners taller so text fits */
+  .site-header,
+  .subpage-header {
+    height: 420px !important;
+    background-position: center top !important;
+  }
+
+  /* Push big titles down slightly */
+  .main-title,
+  .subpage-title h1 {
+    margin-top: 120px !important;
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  /* Adjust secondary text under headers */
+  .tagline {
+    margin-top: 10px;
+    font-size: 1.3rem !important;
+  }
+
+  /* Slight nudge for faded banners so text isn't hidden */
+  .faded-banner .banner-text {
+    top: 0 !important;
+    padding: 0 10px;
+  }
+}
+
+/* === FINAL POLISH: Fix Header Overlap on Mobile === */
+@media (max-width: 900px) {
+  /* Push nav lower so it doesn’t overlap */
+  .top-nav {
+    top: 65px !important;
+  }
+
+  /* Push the header text slightly down */
+  .main-title,
+  .subpage-title h1 {
+    margin-top: 130px !important;
+    font-size: 2.6rem !important;
+  }
+
+  .tagline {
+    font-size: 1.3rem !important;
+    margin-top: 10px;
+  }
+
+  /* Slightly taller banner to balance layout */
+  .site-header,
+  .subpage-header {
+    height: 440px !important;
+  }
+}
+
+/* === Micro-Adjust Header Spacing (Final Alignment) === */
+@media (max-width: 900px) {
+  /* give logo and nav breathing room */
+  .logo {
+    top: 10px !important;
+  }
+
+  .top-nav {
+    top: 80px !important; /* push nav further down */
+  }
+
+  /* shift main header text slightly lower */
+  .main-title,
+  .subpage-title h1 {
+    margin-top: 140px !important;
+    font-size: 2.6rem !important;
+    line-height: 1.2;
+  }
+
+  /* tagline under title */
+  .tagline {
+    margin-top: 10px;
+    font-size: 1.3rem !important;
+  }
+
+  /* make sure banner tall enough to fit everything comfortably */
+  .site-header,
+  .subpage-header {
+    height: 470px !important;
+  }
+}
+
+/* === Fix banner spacing & black strip issue === */
+.site-header,
+.subpage-header {
+  position: relative;
+  margin-bottom: 0;          /* remove black gap */
+  padding-bottom: 40px;      /* gives space between banner and next text */
+  overflow: hidden;          /* hides any visual overflow */
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .subpage-header {
+    height: auto;            /* allow banner image to size naturally */
+    padding-bottom: 60px;    /* extra breathing room on mobile */
+  }
+
+  .main-title,
+  .subpage-title h1 {
+    margin-top: 100px;       /* centers Ghostly Hours text vertically */
+  }
+}
+
+
+
+

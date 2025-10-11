@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghostly Hours is a guide for ghost hunting and paranormal investigations.">
+  <title>Ghostly Hours: A Ghost Hunter's Guide</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* make Locations text on banner bigger */
+    .subpage-title h1 {
+      font-size: 5.5rem; /* much larger */
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    }
+
+    /* move headline text lower */
+    .intro-text {
+      position: relative;
+      top: 40px; /* moves it down slightly */
+    }
+
+    /* 2-column grid layout for 8 locations */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+    }
+
+    .locations-grid .location-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .locations-grid .location-item h3 {
+      color: var(--accent);
+      font-family: 'EB Garamond', serif;
+      font-size: 1.6rem;
+      margin-top: 15px;
+    }
+
+    .locations-grid .location-item p {
+      color: var(--text);
+      font-family: 'Merriweather', serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="locations-page">
+
+  <!-- Header -->
+  <header class="subpage-header" style="background-image: url('locationsbanner.jpg');">
+    <img src="ghostlyLOGO.gif" alt="Ghostly Hours Logo" class="logo">
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="tools.html">Tools &amp; Gadgets</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="locations.html" class="active">Locations</a></li>
+      </ul>
+    </nav>
+
+    <div class="subpage-title fade-in">
+      <h1>Locations</h1>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="faded-banner">
+    <div class="banner-text">
+      <h2 style="color: var(--accent); text-align:center; font-family:'EB Garamond', serif; font-weight: 500;">
+        There are countless haunted locations around the world, each with its own eerie history and paranormal occurrences. Here, you'll discover some of the most infamous sites and places where reported encounters of unexplained activity have been captured.
+      </h2>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main>
+    <section class="locations-grid">
+
+      <div class="location-item">
+        <img src="stanley.jpg" alt="The Stanley Hotel">
+        <h3>The Stanley Hotel</h3>
+        <p>The Stanley Hotel is located in Estes Park, Colorado, known for its Georgian architecture and luxurious interiors since 1909. Its hauntings inspired Stephen King's <em>The Shining</em>, with guests reporting phantom piano music and ghost sightings. The hotel now embraces its reputation with nightly tours.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="moundsville.jpg" alt="Moundsville Penitentiary">
+        <h3>Moundsville Penitentiary</h3>
+        <p>Located in West Virginia, this penitentiary was one of America’s most violent prisons. Nearly a thousand men died here from executions or riots. Closed in 1995, its cells are said to still echo with the screams of the condemned.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="transallegheny.jpg" alt="Trans-Allegheny Lunatic Asylum">
+        <h3>Trans-Allegheny Lunatic Asylum</h3>
+        <p>Opened in 1864, this massive asylum held thousands of patients until closing in 1994. Many perished within its walls, and today ghost hunters can explore its four haunted hotspots on overnight tours.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="villisca.jpg" alt="Villisca Axe Murder House">
+        <h3>Villisca Axe Murder House</h3>
+        <p>Site of a brutal 1912 family murder, this small Iowa home is now open for overnight stays. Visitors often report footsteps, voices, and sightings of shadowy figures carrying an axe.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="queenmary.jpg" alt="RMS Queen Mary">
+        <h3>RMS Queen Mary</h3>
+        <p>The RMS Queen Mary in Long Beach was a luxury liner turned hotel, but countless deaths aboard have left it haunted. Guests claim to see drowned passengers and hear ghostly footsteps echoing through the halls.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="whaleyhouse.jpg" alt="The Whaley House">
+        <h3>The Whaley House</h3>
+        <p>Built in 1857 in San Diego atop the site of a public gallows, the Whaley House is said to host the spirits of both the executed and the Whaley family itself, whose tragic fates are tied to the home.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="executionrocks.jpg" alt="Execution Rocks Lighthouse">
+        <h3>Execution Rocks Lighthouse</h3>
+        <p>Situated off Long Island’s coast, legend says British soldiers chained prisoners to the rocks to drown during high tide. The lighthouse remains a site of eerie lights and whispers.</p>
+      </div>
+
+      <div class="location-item">
+        <img src="biltmore.jpg" alt="The Biltmore Hotel">
+        <h3>The Biltmore Hotel (Los Angeles)</h3>
+        <p>Opened in 1923, this glamorous LA landmark is forever linked to the 1947 “Black Dahlia” murder. Guests and staff report seeing the ghost of Elizabeth Short in mirrors and corridors.</p>
+      </div>
+
+    </section>
+  </main>
+  
+ <!-- Divider -->
+<section class="line-divider">
+  <img src="divider.png" alt="Divider line" class="divider-img">
+</section>
+
+<!-- Video Section -->
+<section class="video-section">
+  <h2 class="hook">
+    See the Paranormal Evidence Come to Life  — Real Evidence from the Field
+  </h2>
+
+  <div class="video-pair">
+    <!-- Ghost Adventures Clip -->
+    <div class="video-item">
+      <video controls>
+        <source src="ghostadventures.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        <a href="https://www.youtube.com/watch?v=h0pO_iWllEg" target="_blank">
+          Watch the full Ghost Adventures clip here
+        </a>
+      </p>
+    </div>
+
+    <!-- Stanley Hotel Clip -->
+    <div class="video-item">
+      <video controls>
+        <source src="stanleyghost.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        <a href="https://www.youtube.com/watch?v=xAmClLRpQg8" target="_blank">
+          Watch the full Stanley Hotel video here
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sources Section -->
+<section class="sources">
+  <h3>Sources regarding information on these locations</h3>
+  <ul class="source-list">
+    <li>
+      <a href="https://www.travelchannel.com/interests/haunted/articles/top-10-most-haunted-places" target="_blank">
+        Travel Channel – Top 10 Most Haunted Places
+      </a>
+    </li>
+    <li>
+      <a href="https://www.cowneck.org/execution-rocks-lighthouse" target="_blank">
+        Cow Neck Historical Society – Execution Rocks Lighthouse
+      </a>
+    </li>
+    <li>
+      <a href="https://www.americanghostwalks.com/articles/biltmore-hotel-haunted-los-angeles" target="_blank">
+        American Ghost Walks – Biltmore Hotel (Los Angeles)
+      </a>
+    </li>
+    <li>
+      <a href="https://www.cntraveler.com/gallery/the-most-haunted-places-in-america" target="_blank">
+        Condé Nast Traveler – Most Haunted Places in America
+      </a>
+    </li>
+    <li>
+      <a href="https://www.phoenix.org/valley_history/hotel-san-carlos-a-haunted-history/article_7a9f272b-ce40-5536-aee6-d8438dac9c13.html" target="_blank">
+        Phoenix.org – Hotel San Carlos: A Haunted History
+      </a>
+    </li>
+  </ul>
+</section>
+
+  <footer>
+  <p>&copy; Copyright 2025 by Chloe Johnson.</p>
+   <p>
+  Phone: 123-456-678 |
+  Email: <a href="mailto:Ghostly@Hours.com?subject=Ghostly%20Hours%20Inquiry">Ghostly@Hours.com</a>
+</p>
+</footer>
+</body>
+</html>

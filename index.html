@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +23,8 @@
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="history.html">History</a></li>
     <li><a href="tools.html">Tools &amp; Gadgets</a></li>
-    <li><a href="#">Rules</a></li>
-    <li><a href="#">Locations</a></li>
+    <li><a href="rules.html">Rules</a></li>
+    <li><a href="locations.html">Locations</a></li>
   </ul>
 </nav>
 
@@ -36,9 +37,8 @@
 
   <main>
     <!-- Intro Section with Image Overlay -->
-    <section class="intro-section">
-      <img src="Faded.png" alt="Haunted texture" class="intro-image">
-      <div class="intro-text">
+    <section class="faded-banner">
+      <div class="banner-text">
         <h2>A Guide to Ghost Hunting and Paranormal Investigations</h2>
         <p>
           Have you ever wanted to expand your knowledge of the paranormal? Or get out in the field and investigate for yourself?
@@ -49,24 +49,119 @@
     </section>
 
     <!-- Getting Started Section -->
-    <section class="getting-started">
-      <h2>Getting Started</h2>
-      <p>
-        When getting started, ghost hunting requires basic equipment and preparation for a long night of exploration. To begin planning,
-        you'll want to choose a recognized haunted location, preferably one close by. If you are curious about where to start, you can check
-        out some of these locations here. After deciding on the date and location, you must gather the essential tools like a flashlight,
-        an EMF meter, a digital recorder, and a camera. Remember to bring spare memory cards, batteries, or any other electrical components
-        for your gear! A common assumption when investigating is the idea that things will instantly start to happen. This is not the case,
-        as patience is key. Sometimes, investigators can go to locations and receive nothing too significant, while other locations will
-        provide the most memorable nights to last a lifetime.
-      </p>
-    </section>
+<section class="getting-started">
+  <h2>Getting Started</h2>
+  <p>
+    When getting started, ghost hunting requires basic equipment and preparation for a long night of exploration. To begin planning,
+    you'll want to choose a recognized haunted location, preferably one close by. If you are curious about where to start, you can check
+    out some of these locations here. After deciding on the date and location, you must gather the essential tools like a flashlight,
+    an EMF meter, a digital recorder, and a camera.
+  </p>
+
+  <!-- Image Divider -->
+  <section class="image-divider">
+    <img src="cameraman.jpg" alt="Ghost hunter with camera" class="divider-img">
+  </section>
+
+  <p>
+    Remember to bring spare memory cards, batteries, or any other electrical components for your gear! A common assumption when
+    investigating is the idea that things will instantly start to happen. This is not the case, as patience is key. Sometimes,
+    investigators can go to locations and receive nothing too significant, while other locations will provide the most memorable
+    nights to last a lifetime.
+  </p>
+</section>
+
+<!-- Line Divider -->
+<section class="line-divider">
+  <img src="Line.jpg" alt="Divider line" class="divider-img">
+</section>
+
+<!-- Sub Headline and Summary -->
+<section class="sub-message">
+  <h2>Ghost hunting can offer an exciting blend of discovery, thrill, and mystery!</h2>
+  <p>
+    Even if you are trying to find a spooky activity with your friends for the fall season, ghost hunting is something everyone should experience once in their life — you might even gather the incredible evidence you've been looking for. Whether you're a beginner or a pro, knowing the proper approach and tools will give you the skills to ghost hunt confidently. 
+    <strong>Happy Hunting!</strong>
+  </p>
+</section>
+
+<!-- Discover More Section -->
+<section class="discover-more">
+  <h2>Discover More Beyond the Basics!</h2>
+  <p>
+    Take a look at some of our informative pages and dive deeper into the world of ghost hunting.
+  </p>
+
+  <!-- Four linked images -->
+  <div class="discover-grid">
+    <!-- History -->
+    <a href="history.html" class="discover-item">
+      <img src="historybanner.jpg" alt="History Banner">
+      <div class="overlay-text">Learn More!</div>
+      <p>Learn about the fascinating history!</p>
+    </a>
+
+    <!-- Tools & Gadgets -->
+    <a href="tools.html" class="discover-item">
+      <img src="toolsandgadgetsbanner.jpg" alt="Tools Banner">
+      <div class="overlay-text">Learn More!</div>
+      <p>Explore paranormal tools and gadgets!</p>
+    </a>
+
+    <!-- Rules -->
+    <a href="rules.html" class="discover-item">
+      <img src="rulesbanner.jpg" alt="Rules Banner">
+      <div class="overlay-text">Learn More!</div>
+      <p>Understand the rules of investigation!</p>
+    </a>
+
+    <!-- Locations -->
+    <a href="locations.html" class="discover-item">
+      <img src="locationsbanner.jpg" alt="Locations Banner">
+      <div class="overlay-text">Learn More!</div>
+      <p>Visit eerie and haunted locations!</p>
+    </a>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2 class="contact-heading">
+    Whether a question or a haunting tale... <br>
+    <span>We WANT to hear it!</span>
+  </h2>
+
+  <h3 class="contact-subheading">Contact Us!</h3>
+
+  <form class="contact-form" action="#" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <div class="form-row">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+    </div>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="8" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
   </main>
 
   <footer>
     <p>&copy; Copyright 2025 by Chloe Johnson.</p>
-    <p><a href="#">Sources</a> | <a href="#">Contact</a></p>
-    <p>Phone: 123-456-678 | Email: Ghostly@Hours.com</p>
+    <p>
+  Phone: 123-456-678 |
+  Email: <a href="mailto:Ghostly@Hours.com?subject=Ghostly%20Hours%20Inquiry">Ghostly@Hours.com</a>
+</p>
   </footer>
 </body>
 </html>
