@@ -698,11 +698,11 @@ body.locations-page .subpage-title h1 {
   color: #ffffff;
 }
 
-/* === FIXED FADED BANNER / DIVIDER (APPLIES TO ALL PAGES) === */
+/* === FIXED FADED BANNER / DIVIDER (WORKS ON GITHUB) === */
 .faded-banner {
   position: relative;
   width: 100%;
-  height: 380px; /* adjust height as needed */
+  height: 380px; /* adjust height if needed */
   background: url('Faded.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -715,7 +715,7 @@ body.locations-page .subpage-title h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.45); /* subtle dark overlay */
+  background-color: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
   z-index: 1;
 }
 
@@ -725,6 +725,7 @@ body.locations-page .subpage-title h1 {
   max-width: 1000px;
   padding: 0 20px;
   color: var(--text);
+  top: -40px; /* slightly moves text up for better placement */
 }
 
 .faded-banner .banner-text h2 {
@@ -739,25 +740,6 @@ body.locations-page .subpage-title h1 {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text);
-}
-
-/* === TEMP FIX: remove anything causing black box === */
-.faded-banner, .faded-banner::before, .faded-banner .banner-text {
-  background-color: transparent !important;
-  background-image: url('Faded.PNG') !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-.faded-banner::before {
-  content: none !important;
-}
-
-body.rules-page .faded-banner .banner-text {
-  top: -65px; /* moves your intro text closer to banner */
 }
 
 /* === OVERRIDE: Consistent Readable Font for All Subpages === */
