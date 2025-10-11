@@ -264,7 +264,7 @@ footer a:hover {
   position: relative;
   width: 100%;
   height: 380px;
-  background: url('Faded.PNG') no-repeat center center/cover;
+  background: url('Faded.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -740,6 +740,25 @@ body.locations-page .subpage-title h1 {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text);
+}
+
+/* === TEMP FIX: remove anything causing black box === */
+.faded-banner, .faded-banner::before, .faded-banner .banner-text {
+  background-color: transparent !important;
+  background-image: url('Faded.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.faded-banner::before {
+  content: none !important;
+}
+
+body.rules-page .faded-banner .banner-text {
+  top: -65px; /* moves your intro text closer to banner */
 }
 
 /* === OVERRIDE: Consistent Readable Font for All Subpages === */
@@ -1245,7 +1264,3 @@ body.locations-page .banner-text {
     margin-top: 100px;       /* centers Ghostly Hours text vertically */
   }
 }
-
-
-
-
